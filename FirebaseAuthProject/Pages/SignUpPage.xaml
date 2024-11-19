@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirebaseAuthProject.Pages.SignUpPage"
+             Title="Sign Up"
+             BackgroundColor="#F8F9FA">
+
+    <ScrollView>
+        <Grid Padding="20,0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Header Section -->
+            <StackLayout Grid.Row="0" Spacing="5" Margin="0,60,0,40">
+                <Image Source="logo.jpg" 
+                       HeightRequest="200" 
+                       WidthRequest="200" 
+                       HorizontalOptions="Center" />
+                <Label Text="Create Account"
+                       FontSize="32"
+                       FontFamily="OpenSansBold"
+                       TextColor="Blue"
+                       HorizontalOptions="Center" />
+                <Label Text="Join us and experience something amazing!"
+                       FontSize="16"
+                       TextColor="#6C757D"
+                       HorizontalOptions="Center" />
+            </StackLayout>
+
+            <!-- Form Section -->
+            <StackLayout Grid.Row="1" Spacing="20" VerticalOptions="Center">
+                <!-- First Name Input -->
+                <StackLayout Spacing="8">
+                    <Label Text="First Name"
+                           TextColor="#495057"
+                           FontSize="14"
+                           Margin="8,0,0,0" />
+                    <Border StrokeThickness="1"
+                           Stroke="#DEE2E6"
+                           StrokeShape="RoundRectangle 12"
+                           BackgroundColor="White"
+                           HeightRequest="56"
+                           Padding="16,0">
+                        <Entry x:Name="FirstNameEntry"
+                               Placeholder="Enter your first name"
+                               TextColor="#212529"
+                               PlaceholderColor="#ADB5BD"
+                               FontSize="16"
+                               VerticalOptions="Center" />
+                    </Border>
+                    <Label x:Name="FirstNameError"
+                           TextColor="#DC3545"
+                           FontSize="12"
+                           IsVisible="False"
+                           Margin="8,0,0,0" />
+                </StackLayout>
+
+                <!-- Last Name Input -->
+                <StackLayout Spacing="8">
+                    <Label Text="Last Name"
+                           TextColor="#495057"
+                           FontSize="14"
+                           Margin="8,0,0,0" />
+                    <Border StrokeThickness="1"
+                           Stroke="#DEE2E6"
+                           StrokeShape="RoundRectangle 12"
+                           BackgroundColor="White"
+                           HeightRequest="56"
+                           Padding="16,0">
+                        <Entry x:Name="LastNameEntry"
+                               Placeholder="Enter your last name"
+                               TextColor="#212529"
+                               PlaceholderColor="#ADB5BD"
+                               FontSize="16"
+                               VerticalOptions="Center" />
+                    </Border>
+                    <Label x:Name="LastNameError"
+                           TextColor="#DC3545"
+                           FontSize="12"
+                           IsVisible="False"
+                           Margin="8,0,0,0" />
+                </StackLayout>
+
+                <!-- Email Input -->
+                <StackLayout Spacing="8">
+                    <Label Text="Email"
+                           TextColor="#495057"
+                           FontSize="14"
+                           Margin="8,0,0,0" />
+                    <Border StrokeThickness="1"
+                           Stroke="#DEE2E6"
+                           StrokeShape="RoundRectangle 12"
+                           BackgroundColor="White"
+                           HeightRequest="56"
+                           Padding="16,0">
+                        <Entry x:Name="EmailEntry"
+                               Placeholder="Enter your email"
+                               TextColor="#212529"
+                               PlaceholderColor="#ADB5BD"
+                               Keyboard="Email"
+                               FontSize="16"
+                               VerticalOptions="Center" />
+                    </Border>
+                    <Label x:Name="EmailError"
+                           TextColor="#DC3545"
+                           FontSize="12"
+                           IsVisible="False"
+                           Margin="8,0,0,0" />
+                </StackLayout>
+
+                <!-- Password Input -->
+                <StackLayout Spacing="8">
+                    <Label Text="Password"
+                           TextColor="#495057"
+                           FontSize="14"
+                           Margin="8,0,0,0" />
+                    <Border StrokeThickness="1"
+                           Stroke="#DEE2E6"
+                           StrokeShape="RoundRectangle 12"
+                           BackgroundColor="White"
+                           HeightRequest="56"
+                           Padding="16,0">
+                        <Entry x:Name="PasswordEntry"
+                               Placeholder="Create a password"
+                               TextColor="#212529"
+                               PlaceholderColor="#ADB5BD"
+                               IsPassword="True"
+                               FontSize="16"
+                               VerticalOptions="Center" />
+                    </Border>
+                    <Label x:Name="PasswordError"
+                           TextColor="#DC3545"
+                           FontSize="12"
+                           IsVisible="False"
+                           Margin="8,0,0,0" />
+                </StackLayout>
+
+                <!-- Sign Up Button -->
+                <Button Text="Create Account"
+                        x:Name="SignUpButton"
+                        Clicked="OnSignUpClicked"
+                        BackgroundColor="#0D6EFD"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="12"
+                        HeightRequest="56"
+                        FontSize="16"
+                        Margin="0,16,0,0" />
+            </StackLayout>
+
+            <!-- Footer Section -->
+            <StackLayout Grid.Row="2"
+                        Orientation="Horizontal"
+                        HorizontalOptions="Center"
+                        Spacing="4"
+                        Margin="0,0,0,40">
+                <Label Text="Already have an account?"
+                       TextColor="#6C757D"
+                       FontSize="16"
+                       VerticalOptions="Center" />
+                <Button Text="Sign In"
+                        Clicked="OnGoToSignInClicked"
+                        BackgroundColor="Transparent"
+                        TextColor="#0D6EFD"
+                        FontAttributes="Bold"
+                        BorderWidth="0"
+                        FontSize="18"
+                        Padding="4,0"
+                        VerticalOptions="Center" />
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
